@@ -11,6 +11,6 @@ U, S, Vt = np.linalg.svd(A)
 print(f'U shape {U.shape} S shape {S.shape} Vt shape {Vt.shape} ')
 
 B = np.matmul(U, Vt)
-print(B.astype(float))
+print(B)
 
 print(f'Frobenius norm: {frobenius_norm(A-B)}')
