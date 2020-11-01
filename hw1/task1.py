@@ -14,3 +14,9 @@ B = np.matmul(U, Vt)
 print(B)
 
 print(f'Frobenius norm: {frobenius_norm(A-B)}')
+
+for i in range(3):
+    A_0 = A[:,i]
+    B_0 = B[:,i]
+    cos_a = np.matmul(A_0.transpose(), B_0) / (np.linalg.norm(A_0) + np.linalg.norm(B_0))
+    print(cos_a, np.degrees(np.arccos(cos_a)))

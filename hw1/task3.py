@@ -21,6 +21,3 @@ for i in range(n):
     B = A*x
     print(f'Solution for A*x = 0: \n x: {x}\n AX:\n{B} \n B=\n {np.sum(B, axis=1)}')
     print()
-
-
-print(0.3925*2 -0.80808*3 + 4*0.43866 -0.02308*5)
