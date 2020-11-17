@@ -1,8 +1,10 @@
 import numpy as np
 from numpy.core.fromnumeric import searchsorted
+import random
 
-points_first  = [[0,0], [150, 0], [150, 150],[0,150]]
-points_second = [[100, 100], [200, 80], [220, 80], [100, 200]]
+count = 4
+points_first  = [random.sample(range(1, 10), 2)for _ in range(count)]
+points_second = [random.sample(range(1, 10), 2)for _ in range(count)]
 A = []
 for point1, point2 in zip(points_first, points_second):
     x1, y1 = point1
