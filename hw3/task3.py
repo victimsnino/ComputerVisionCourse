@@ -2,7 +2,7 @@ import numpy as np
 import math
 from task1 import levicivita_matrix
 from task2 import rotation_matrix
-# copy-paste...
+
 params = np.matrix([[1,0,0], [0,1,0], [0,0,1]])
 
 angle = 45
