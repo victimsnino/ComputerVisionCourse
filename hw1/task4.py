@@ -9,5 +9,5 @@ e=3
 p1 = np.array([a,b,c]).reshape((1, 3))
 p2 = np.array([c,d,e]).reshape((1, 3))
 
-point_of_intersection = np.cross(p1, p2)
-print(point_of_intersection)
+x,y,z = list(np.cross(p1, p2)[0])
+print([x/z,y/z])
