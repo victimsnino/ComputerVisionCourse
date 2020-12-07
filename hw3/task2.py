@@ -2,23 +2,24 @@ import numpy as np
 import math
 from task1 import levicivita_matrix
 
-def rotation_matrix(angle):
-    angle_in_rads = angle*math.pi/180
-    cos = np.cos(angle_in_rads)
-    sin = np.sin(angle_in_rads)
-
-    return np.matrix([[cos, -sin, 0], [sin, cos, 0], [0, 0, 1]])
-
 def invert(A):
     U, S, Vt = np.linalg.svd(A, full_matrices=False)
     S = np.diag(S)
     return np.dot(np.dot(Vt.transpose(), np.linalg.inv(S)), U.transpose())
 
 if __name__ == '__main__':
-    rotation_matrix_first  = rotation_matrix(45)
+    angle_in_rads = 45*math.pi/180
+    cos = np.cos(angle_in_rads)
+    sin = np.sin(angle_in_rads)
+
+    rotation_matrix_first = np.matrix([[cos, -sin, 0], [sin, cos, 0], [0, 0, 1]])
     translation_first = np.array([[0,0,0]]).T
 
-    rotation_matrix_second = rotation_matrix(-45)
+    angle_in_rads = -45*math.pi/180
+    cos = np.cos(angle_in_rads)
+    sin = np.sin(angle_in_rads)
+
+    rotation_matrix_second = np.matrix([[cos, 0, sin], [0, 1, 0], [-sin, 0, cos]])
     translation_second =np.array([[10, 0, 0]]).T
 
     # P = K*[R|T]
