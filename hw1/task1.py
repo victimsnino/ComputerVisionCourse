@@ -12,4 +12,4 @@ B = np.dot(U, Vt)
 
 print(f'Original matrix \n{A}')
 print(f'Closest matrix \n{B}')
-print(f'Angle is {np.arcsin(B[1,0])*180/np.pi} degrees')
+print(f'Angle is {np.arcsin(B[1,0])*180/np.pi} degrees around OZ line')
