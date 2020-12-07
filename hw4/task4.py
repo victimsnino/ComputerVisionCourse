@@ -8,15 +8,13 @@ def get_fundamental_matrix(first_points, second_points):
         W[i] = [u1*u2, v1*u2, u2, u1*v2, v1*v2, v2, u1, v1, 1]
             
     U,S,Vt = np.linalg.svd(W)
-    F = Vt[-1].reshape(3,3)
+    Vt = Vt[-1].reshape(3,3)
 
     U,S,Vt = np.linalg.svd(F)
     S = np.diag(S)
     S[-1,-1] = 0
 
-    F = np.dot(U, np.dot(S,Vt))
-    
-    return F
+    return np.dot(U, np.dot(S,Vt))
 
 angle_in_rads = 0
 cos = np.cos(angle_in_rads)

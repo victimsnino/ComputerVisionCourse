@@ -11,7 +11,7 @@ cos = np.cos(angle_in_rads)
 sin = np.sin(angle_in_rads)
 
 rotation = np.matrix([[cos, -sin, 0], [sin, cos, 0], [0, 0, 1]])
-translation = np.dot(rotation, np.array([[10, 0, 0]]).T)
+translation = np.array([[10, 0, 0]]).T
 projection_first = params.dot(np.hstack((rotation, translation)))
 
 rotation_second = np.eye(3)
