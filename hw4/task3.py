@@ -1,12 +1,15 @@
+# u1 = fx1*x/z + Cx1
+# u1 - Cx1 = fx1*x/z
+# (u1-Cx1)*z/fx1 = x
 
+# u2 = fx2*(x+tx)/z + Cx2
+# u2 - Cx2 = fx2*(x+tx)/z
+# (u2 - Cx2)*z/fx2 = x+tx
+# (u2-Cx2)*z/fx2 - tx = x
 
-#u1=fx1*x/z + Cx1
-#u2=fx2*((x+tx)/z) + Cx2
+# x = x
+# (u1-Cx1)*z/fx1 = (u2-Cx2)*z/fx2 - tx
+# (u1-Cx1)*z/fx1 - (u2-Cx2)*z/fx2 = -tx
+# z*((u1-Cx1)/fx1 - (u2-Cx2)/fx2) = -tx
 
-# u2-u1=fx2*((x+tx)/z) + Cx2 - fx1*x/z - Cx1 = fx2*x/z + fx2*tx/z + cx2 - fx1*x/z - Cx1 = 
-# = (fx2*x + fx2*tx + cx2*z - fx1*x - cx1*z)/z
-
-# z - cx2*z + cx1*z = fx2*x + fx2*tx - fx1*x - u2*z + u1*z 
-# z(1-cx2+cx1+u2-u1) = fx2*x + fx2*tx - fx1*x
-
-# z = (fx2*x + fx2*tx - fx1*x)/(1-cx2+cx1+u2-u1)
+# z = -tx/((u1-Cx1)/fx1 - (u2-Cx2)/fx2)
