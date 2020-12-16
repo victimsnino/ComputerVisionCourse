@@ -29,4 +29,4 @@ def get_projection_matrix(percent):
 
 print(f'get_projection_matrix(0) == first_projection  : {np.allclose(params.dot(np.hstack((rotation_matrix_first, translation_first))), get_projection_matrix(0))}')
 print(f'get_projection_matrix(1) == second_projection : {np.allclose(params.dot(np.hstack((rotation_matrix_second, translation_second))),get_projection_matrix(1))}')
-print(get_projection_matrix(0.5))
+print(np.dot(get_projection_matrix(0.5), np.array([[0,0,0,1]]).T))
