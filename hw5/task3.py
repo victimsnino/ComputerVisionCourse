@@ -21,12 +21,12 @@ rotation_quart_second = Quaternion(matrix=rotation_matrix_second)
 
 params = np.matrix([[1,0,0], [0,1,0], [0,0,1]])
 
-def get_position(percent):
+def get_projection_matrix(percent):
     rotation_quart = rotation_quart_first*(1-percent) + rotation_quart_second*(percent)
     rotation = rotation_quart.rotation_matrix
     translation = translation_first*(1-percent) + translation_second*(percent)
     return params.dot(np.hstack((rotation, translation)))
 
-print(f'get_position(0) == first_projection  : {np.allclose(params.dot(np.hstack((rotation_matrix_first, translation_first))), get_position(0))}')
-print(f'get_position(1) == second_projection : {np.allclose(params.dot(np.hstack((rotation_matrix_second, translation_second))),get_position(1))}')
-print(get_position(0.5))
+print(f'get_projection_matrix(0) == first_projection  : {np.allclose(params.dot(np.hstack((rotation_matrix_first, translation_first))), get_projection_matrix(0))}')
+print(f'get_projection_matrix(1) == second_projection : {np.allclose(params.dot(np.hstack((rotation_matrix_second, translation_second))),get_projection_matrix(1))}')
+print(get_projection_matrix(0.5))
