@@ -11,7 +11,7 @@
 
 * Logs:
 ```python
-Find 10 different balls
+Found 10 different balls
 Mean radius 61.35030975341797
 Var radius 43.26559472140274
 ```

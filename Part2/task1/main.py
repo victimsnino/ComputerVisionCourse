@@ -19,7 +19,7 @@ img = cv2.morphologyEx(img, cv2.MORPH_OPEN, kernel, iterations=20)
 contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 img = cv2.drawContours(orig_img, contours, -1, (0,0,255), 3)
 
-print(f'Find {len(contours)} different balls')
+print(f'Found {len(contours)} different balls')
 
 # Find suitable by size circles
 circles = [cv2.minEnclosingCircle(contour) for contour in contours]
