@@ -1,3 +1,4 @@
 Part1/hw3/data/*
 Part1/hw3/output/*
 *.pyc
+.vscode
